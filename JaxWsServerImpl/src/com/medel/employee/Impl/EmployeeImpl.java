@@ -23,10 +23,14 @@ public class EmployeeImpl implements EmployeeFx {
   @Override
   public String createEmployee(Employee employee) {
     try {
-      employees.put(employee.getId(), employee);
-      return "success";
+      if (employees.containsKey(employee.getId())) {
+        return "An employee with the same ID already exists!";
+      }else{
+        employees.put(employee.getId(), employee);
+        return "Success";
+      }
     } catch (Exception e) {
-      return "error";
+      return "Error";
     }
   }
 
@@ -49,11 +53,11 @@ public class EmployeeImpl implements EmployeeFx {
     try {
       if (employees.containsKey(id)) {
         employees.remove(id);
-        return "success";
+        return "Success";
       }
-      return "employee not found";
+      return "Employee not found";
     } catch (Exception e) {
-      return "error";
+      return "Error";
     }
   }
 
@@ -63,11 +67,11 @@ public class EmployeeImpl implements EmployeeFx {
       if (employees.containsKey(id)) {
         employees.remove(id);
         createEmployee(employee);
-        return "success";
+        return "Success";
       }
-      return "employee not found";
+      return "Employee not found";
     } catch (Exception e) {
-      return "error";
+      return "Error";
     }
   }
 }
