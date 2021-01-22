@@ -11,9 +11,9 @@ import javax.jws.soap.SOAPBinding.Style;
 @WebService
 @SOAPBinding (style=Style.RPC)
 public interface EmployeeFx {
-	@WebMethod Employee getEmployeeDetails(String id);
-	@WebMethod String deleteEmployee(String id);
-	@WebMethod String updateEmployee(String id, Employee employee);
+	@WebMethod Employee getEmployeeDetails(int id);
+	@WebMethod String deleteEmployee(int id);
+	@WebMethod String updateEmployee(int id, Employee employee);
 	@WebMethod String createEmployee(Employee employee);
 	@WebMethod Employee [] getAllEmployees();
 }

@@ -11,10 +11,10 @@ import com.medel.employee.fx.EmployeeFx;
 
 @WebService(endpointInterface = "com.medel.employee.fx.EmployeeFx")
 public class EmployeeImpl implements EmployeeFx {
-  Map<String, Employee> employees = new HashMap<String, Employee>();
+  Map<Integer, Employee> employees = new HashMap<Integer, Employee>();
 
   @Override
-  public Employee getEmployeeDetails(String id) {
+  public Employee getEmployeeDetails(int id) {
     if (employees.containsKey(id))
       return employees.get(id);
     return new Employee();
@@ -39,7 +39,7 @@ public class EmployeeImpl implements EmployeeFx {
     ArrayList<Employee> emps = new ArrayList<Employee>();
     Employee emp = null;
 
-    for (Map.Entry<String, Employee> e : employees.entrySet()) {
+    for (Map.Entry<Integer, Employee> e : employees.entrySet()) {
       emp = new Employee();
       emp.setId(e.getKey());
       emp.setName(e.getValue().getName());
@@ -49,7 +49,7 @@ public class EmployeeImpl implements EmployeeFx {
   }
 
   @Override
-  public String deleteEmployee(String id) {
+  public String deleteEmployee(int id) {
     try {
       if (employees.containsKey(id)) {
         employees.remove(id);
@@ -62,7 +62,7 @@ public class EmployeeImpl implements EmployeeFx {
   }
 
   @Override
-  public String updateEmployee(String id, Employee employee) {
+  public String updateEmployee(int id, Employee employee) {
     try {
       if (employees.containsKey(id)) {
         employees.remove(id);

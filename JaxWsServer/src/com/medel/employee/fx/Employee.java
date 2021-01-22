@@ -2,14 +2,14 @@ package com.medel.employee.fx;
 
 
 public class Employee {
-	private String id;
+	private int id;
 	private String name;
-	private String employeeNumber;
+	private int employeeNumber;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -18,10 +18,10 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getEmployeeNumber() {
+	public int getEmployeeNumber() {
 		return employeeNumber;
 	}
-	public void setEmployeeNumber(String employeeNumber) {
+	public void setEmployeeNumber(int employeeNumber) {
 		this.employeeNumber = employeeNumber;
 	}
 }
