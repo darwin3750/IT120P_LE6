@@ -1,0 +1,5 @@
+package com.medel.employee.fx;
+
+public interface EmployeeFx {
+
+}
