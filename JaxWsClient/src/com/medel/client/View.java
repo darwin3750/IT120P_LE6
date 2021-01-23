@@ -63,10 +63,11 @@ public class View extends JFrame {
           if (idMatcher.find()) {
             status.setText("ID must be a number.");
           } else {
-            textArea.setText(
-              "ID: " + employee.getEmployeeDetails(Integer.parseInt(idTextField.getText())).getId() + "\n" +
+            textArea.setText( employee.getEmployeeDetails(Integer.parseInt(idTextField.getText())).getName() == null ? 
+            		"Employee does not exist!"
+              : ("ID: " + employee.getEmployeeDetails(Integer.parseInt(idTextField.getText())).getId() + "\n" +
               "Name: " + employee.getEmployeeDetails(Integer.parseInt(idTextField.getText())).getName() + "\n" +
-              "Employee Number: " + employee.getEmployeeDetails(Integer.parseInt(idTextField.getText())).getEmployeeNumber() + "\n"
+              "Employee Number: " + employee.getEmployeeDetails(Integer.parseInt(idTextField.getText())).getEmployeeNumber() + "\n")
             );
             status.setText("Request processed!");
           }
