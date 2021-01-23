@@ -35,6 +35,7 @@ public class Client extends JFrame {
     Delete delete = new Delete(mainMenu);
     Update update = new Update(mainMenu);
     View view = new View(mainMenu);
+    ViewAll viewAll = new ViewAll(mainMenu);
 
     JPanel panel = new JPanel();
     panel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -78,6 +79,8 @@ public class Client extends JFrame {
     });
     getAllButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
+        mainMenu.setVisible(false);
+        viewAll.setVisible(true);
       }
     });
 
