@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.xml.ws.Service;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.lang.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -73,7 +74,7 @@ public class ViewAll extends JFrame {
         output += 
             "ID: " + emp.getId() + "\n" +
             "Name: " + emp.getName() + "\n" +
-            "Employee Number: " + emp.getEmployeeNumber() + "\n\n";
+            "Employee Number: " + employee.getEmployeeDetails(emp.getId()).getEmployeeNumber() + "\n\n";
       }
       textArea.setText(output);
   }
