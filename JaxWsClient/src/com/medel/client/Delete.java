@@ -79,16 +79,6 @@ public class Delete extends JFrame {
 	    panel.add(submitButton);
 
 	    setContentPane(panel);
-
-	    // emp.setId(2);
-	    // emp.setName("Paula");
-	    // emp.setEmployeeNumber(222222);
-	    // employee.createEmployee(emp);
-
-	    // System.out.println(employee.getEmployeeDetails(1).getName() + " " +
-	    // employee.getEmployeeDetails(1).getEmployeeNumber());
-	    // System.out.println(employee.getEmployeeDetails(2).getName() + " " +
-	    // employee.getEmployeeDetails(2).getEmployeeNumber());
 	  }
 
 }
